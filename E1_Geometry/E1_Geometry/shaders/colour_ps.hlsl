@@ -4,11 +4,11 @@
 struct InputType
 {
 	float4 position : SV_POSITION;
-	float4 colour : COLOR;
+	float2 tex : TEXCOORD;
 };
 
 
 float4 main(InputType input) : SV_TARGET
 {
-    return float4(1.f, 0.f, 0.f, 1.f);
+    return float4(input.tex.x, input.tex.x, input.tex.x, 1);
 }
